@@ -3,6 +3,7 @@ package com.mengze.sky;
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 
@@ -22,11 +23,27 @@ public class AnnouncementDialog {
             "感谢您的支持，祝您查询愉快！";
     
     public static void showAnnouncement(Context context) {
-        new MaterialAlertDialogBuilder(context)
-                .setTitle("📢 重要公告")
-                .setMessage(ANNOUNCEMENT_TEXT)
-                .setPositiveButton("我知道了", (dialog, which) -> dialog.dismiss())
+        // 创建自定义布局
+        LayoutInflater inflater = LayoutInflater.from(context);
+        View dialogView = inflater.inflate(R.layout.dialog_announcement, null);
+        
+        // 获取布局中的控件
+        TextView tvContent = dialogView.findViewById(R.id.tv_announcement_content);
+        MaterialButton btnOk = dialogView.findViewById(R.id.btn_announcement_ok);
+        
+        // 设置公告内容
+        tvContent.setText(ANNOUNCEMENT_TEXT);
+        
+        // 创建对话框
+        Dialog dialog = new MaterialAlertDialogBuilder(context)
+                .setView(dialogView)
                 .setCancelable(true)
-                .show();
+                .create();
+        
+        // 设置按钮点击事件
+        btnOk.setOnClickListener(v -> dialog.dismiss());
+        
+        // 显示对话框
+        dialog.show();
     }
 }
