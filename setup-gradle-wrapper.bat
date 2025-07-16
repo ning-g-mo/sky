@@ -1,18 +1,18 @@
 @echo off
-echo 正在设置 Gradle Wrapper...
+echo Setting up Gradle Wrapper...
 
-REM 创建 gradle/wrapper 目录（如果不存在）
+REM Create gradle/wrapper directory if it doesn't exist
 if not exist "gradle\wrapper" mkdir "gradle\wrapper"
 
-REM 下载 gradle-wrapper.jar
-echo 下载 gradle-wrapper.jar...
+REM Download gradle-wrapper.jar
+echo Downloading gradle-wrapper.jar...
 powershell -Command "Invoke-WebRequest -Uri 'https://github.com/gradle/gradle/raw/v7.0.2/gradle/wrapper/gradle-wrapper.jar' -OutFile 'gradle/wrapper/gradle-wrapper.jar'"
 
 if exist "gradle\wrapper\gradle-wrapper.jar" (
-    echo Gradle Wrapper 设置完成！
-    echo 现在可以使用 gradlew.bat 命令进行构建了。
+    echo Gradle Wrapper setup complete!
+    echo You can now use gradlew.bat commands for building.
 ) else (
-    echo 下载失败，请检查网络连接或手动下载 gradle-wrapper.jar
+    echo Download failed, please check network connection or manually download gradle-wrapper.jar
 )
 
 pause
