@@ -66,10 +66,10 @@ public class Adorn {
     public String getMask() { return mask; }
     public void setMask(String value) { this.mask = value; }
 
-    public long getNeck() { return neck; }
+    public String getNeck() { return neck; }
     public void setNeck(long value) { this.neck = value; }
 
-    public long getProp() { return prop; }
+    public String getProp() { return prop; }
     public void setProp(long value) { this.prop = value; }
 
     public String getWing() { return wing; }
