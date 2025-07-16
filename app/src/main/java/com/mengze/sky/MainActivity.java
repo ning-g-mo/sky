@@ -92,14 +92,14 @@ public class MainActivity extends AppCompatActivity {
                             resultBuilder.append("=== 装饰品信息 ===\n");
                             resultBuilder.append("斗篷: ").append(model.getAdorn().getWing() != null ? model.getAdorn().getWing() : "未穿戴").append("\n");
                             resultBuilder.append("面具: ").append(model.getAdorn().getMask() != null ? model.getAdorn().getMask() : "未穿戴").append("\n");
-                            resultBuilder.append("头发: ").append(model.getAdorn().getHair() != null ? model.getAdorn().getHair() : "未穿戴").append("\n");
+                            resultBuilder.append("发型: ").append(model.getAdorn().getHair() != null ? model.getAdorn().getHair() : "未穿戴").append("\n");
                             resultBuilder.append("发饰: ").append(model.getAdorn().getHat() != null ? model.getAdorn().getHat() : "未穿戴").append("\n");
-                            resultBuilder.append("角饰: ").append(model.getAdorn().getHorn() != null ? model.getAdorn().getHorn() : "未穿戴").append("\n");
+                            resultBuilder.append("耳饰: ").append(model.getAdorn().getHorn() != null ? model.getAdorn().getHorn() : "未穿戴").append("\n");
                             resultBuilder.append("裤子: ").append(model.getAdorn().getBody() != null ? model.getAdorn().getBody() : "未穿戴").append("\n");
                             resultBuilder.append("鞋子: ").append(model.getAdorn().getFeet() != null ? model.getAdorn().getFeet() : "未穿戴").append("\n");
-                            resultBuilder.append("脸饰: ").append(model.getAdorn().getFace() != null ? model.getAdorn().getFace() : "未穿戴").append("\n");
+                            resultBuilder.append("面饰: ").append(model.getAdorn().getFace() != null ? model.getAdorn().getFace() : "未穿戴").append("\n");
                             resultBuilder.append("项链: ").append(model.getAdorn().getNeck() != null ? model.getAdorn().getNeck() : "未穿戴").append("\n");
-                            resultBuilder.append("背饰: ").append(model.getAdorn().getProp() != null ? model.getAdorn().getProp() : "未穿戴").append("\n\n");
+                            resultBuilder.append("道具: ").append(model.getAdorn().getProp() != null ? model.getAdorn().getProp() : "未穿戴").append("\n\n");
                         }
                         
                         // 其他信息
