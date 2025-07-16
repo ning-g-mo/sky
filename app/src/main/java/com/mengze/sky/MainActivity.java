@@ -98,8 +98,8 @@ public class MainActivity extends AppCompatActivity {
                             resultBuilder.append("裤子: ").append(model.getAdorn().getBody() != null ? model.getAdorn().getBody() : "未穿戴").append("\n");
                             resultBuilder.append("鞋子: ").append(model.getAdorn().getFeet() != null ? model.getAdorn().getFeet() : "未穿戴").append("\n");
                             resultBuilder.append("脸饰: ").append(model.getAdorn().getFace() != null ? model.getAdorn().getFace() : "未穿戴").append("\n");
-                            resultBuilder.append("项链ID: ").append(model.getAdorn().getNeck()).append("\n");
-                            resultBuilder.append("背饰ID: ").append(model.getAdorn().getProp()).append("\n\n");
+                            resultBuilder.append("项链: ").append(model.getAdorn().getNeck() != null ? model.getAdorn().getNeck() : "未穿戴").append("\n");
+                            resultBuilder.append("背饰: ").append(model.getAdorn().getProp() != null ? model.getAdorn().getProp() : "未穿戴").append("\n\n");
                         }
                         
                         // 其他信息
