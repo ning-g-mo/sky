@@ -67,10 +67,10 @@ public class Adorn {
     public void setMask(String value) { this.mask = value; }
 
     public String getNeck() { return neck; }
-    public void setNeck(long value) { this.neck = value; }
+    public void setNeck(String value) { this.neck = value; }
 
     public String getProp() { return prop; }
-    public void setProp(long value) { this.prop = value; }
+    public void setProp(String value) { this.prop = value; }
 
     public String getWing() { return wing; }
     public void setWing(String value) { this.wing = value; }
