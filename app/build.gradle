@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.lightencounterheightapp'
+    namespace 'com.mengze.sky'
     compileSdk 34
     
     defaultConfig {
-        applicationId "com.example.lightencounterheightapp"
+        applicationId "com.mengze.sky"
         minSdk 21
         targetSdk 34
         versionCode 1
