@@ -35,11 +35,11 @@ public class Adorn {
     /**
      * 项链
      */
-    private long neck;
+    private String neck;
     /**
      * 背饰
      */
-    private long prop;
+    private String prop;
     /**
      * 斗篷
      */
