@@ -57,6 +57,9 @@ public class MainActivity extends AppCompatActivity {
                 copyToClipboard();
             }
         });
+        
+        // 显示公告
+        AnnouncementDialog.showAnnouncement(this);
     }
 
     private void queryHeight(String code) {
