@@ -1,4 +1,4 @@
-package com.example.lightencounterheightapp.model;
+package com.mengze.sky.model;
 
 public class ApifoxModel {
     /**
