@@ -35,15 +35,15 @@ public class Adorn {
     /**
      * 项链
      */
-    private String neck;
+    private long neck;
     /**
      * 背饰
      */
-    private String prop;
+    private long prop;
     /**
      * 斗篷
      */
-    private Long wing;
+    private String wing;
 
     public String getBody() { return body; }
     public void setBody(String value) { this.body = value; }
@@ -66,12 +66,12 @@ public class Adorn {
     public String getMask() { return mask; }
     public void setMask(String value) { this.mask = value; }
 
-    public String getNeck() { return neck; }
-    public void setNeck(String value) { this.neck = value; }
+    public long getNeck() { return neck; }
+    public void setNeck(long value) { this.neck = value; }
 
-    public String getProp() { return prop; }
-    public void setProp(String value) { this.prop = value; }
+    public long getProp() { return prop; }
+    public void setProp(long value) { this.prop = value; }
 
-    public Long getWing() { return wing; }
-    public void setWing(Long value) { this.wing = value; }
+    public String getWing() { return wing; }
+    public void setWing(String value) { this.wing = value; }
 }

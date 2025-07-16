@@ -74,11 +74,36 @@ public class MainActivity extends AppCompatActivity {
                 if (response.isSuccessful() && response.body() != null) {
                     ApifoxModel model = response.body();
                     if (model.getCode() == 200) {
-                        String result = "当前身高: " + model.getData().getCurrentHeight() + "\n" +
-                                "身高值: " + model.getData().getHeight() + "\n" +
-                                "最高身高: " + model.getData().getMaxHeight() + "\n" +
-                                "最矮身高: " + model.getData().getMinHeight() + "\n" +
-                                "体型值: " + model.getData().getScale();
+                        StringBuilder resultBuilder = new StringBuilder();
+                        
+                        // 身高信息
+                        resultBuilder.append("=== 身高信息 ===\n");
+                        resultBuilder.append("当前身高: ").append(model.getData().getCurrentHeight()).append("\n");
+                        resultBuilder.append("身高值: ").append(model.getData().getHeight()).append("\n");
+                        resultBuilder.append("最高身高: ").append(model.getData().getMaxHeight()).append("\n");
+                        resultBuilder.append("最矮身高: ").append(model.getData().getMinHeight()).append("\n");
+                        resultBuilder.append("体型值: ").append(model.getData().getScale()).append("\n\n");
+                        
+                        // 装饰品信息
+                        if (model.getAdorn() != null) {
+                            resultBuilder.append("=== 装饰品信息 ===\n");
+                            resultBuilder.append("斗篷: ").append(model.getAdorn().getWing() != null ? model.getAdorn().getWing() : "未穿戴").append("\n");
+                            resultBuilder.append("面具: ").append(model.getAdorn().getMask() != null ? model.getAdorn().getMask() : "未穿戴").append("\n");
+                            resultBuilder.append("头发: ").append(model.getAdorn().getHair() != null ? model.getAdorn().getHair() : "未穿戴").append("\n");
+                            resultBuilder.append("发饰: ").append(model.getAdorn().getHat() != null ? model.getAdorn().getHat() : "未穿戴").append("\n");
+                            resultBuilder.append("角饰: ").append(model.getAdorn().getHorn() != null ? model.getAdorn().getHorn() : "未穿戴").append("\n");
+                            resultBuilder.append("裤子: ").append(model.getAdorn().getBody() != null ? model.getAdorn().getBody() : "未穿戴").append("\n");
+                            resultBuilder.append("鞋子: ").append(model.getAdorn().getFeet() != null ? model.getAdorn().getFeet() : "未穿戴").append("\n");
+                            resultBuilder.append("脸饰: ").append(model.getAdorn().getFace() != null ? model.getAdorn().getFace() : "未穿戴").append("\n");
+                            resultBuilder.append("项链ID: ").append(model.getAdorn().getNeck()).append("\n");
+                            resultBuilder.append("背饰ID: ").append(model.getAdorn().getProp()).append("\n\n");
+                        }
+                        
+                        // 其他信息
+                        resultBuilder.append("=== 其他信息 ===\n");
+                        resultBuilder.append("剩余查询次数: ").append(model.getBalance());
+                        
+                        String result = resultBuilder.toString();
                         textViewResult.setText(result);
                         lastResult = result;
                         buttonCopy.setVisibility(View.VISIBLE);
