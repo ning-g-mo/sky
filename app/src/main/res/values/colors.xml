@@ -17,4 +17,12 @@
     <color name="on_surface_variant_light">#FF424242</color>
     <color name="background_light">#FFFFFFFF</color>
     <color name="on_background_light">#FF000000</color>
+    
+    <!-- 暗色模式颜色的默认值（防止lint错误） -->
+    <color name="surface_dark">#FFFFFFFF</color>
+    <color name="surface_variant_dark">#FFF5F5F5</color>
+    <color name="on_surface_dark">#FF000000</color>
+    <color name="on_surface_variant_dark">#FF424242</color>
+    <color name="background_dark">#FFFFFFFF</color>
+    <color name="on_background_dark">#FF000000</color>
 </resources>
